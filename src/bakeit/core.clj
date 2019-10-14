@@ -1,7 +1,8 @@
 (ns bakeit.core
   (:require [bakeit.cli :as cli]
             [bakeit.upload :as upl]
-            [bakeit.ini :as ini]))
+            [bakeit.ini :as ini]
+            [clojure.java.browse :as browser]))
 
 (def pastery-paste-api "https://www.pastery.net/api/paste/")
 
@@ -25,7 +26,7 @@
 
 (defn maybe-open-browser [options url]
   (if (:open-browser options)
-    (clojure.java.browse/browse-url url)))
+    (browser/browse-url url)))
 
 (defn -main [& args]
   (let [response (cli/parse-args args handle-upload)]
