@@ -1,4 +1,4 @@
-BakeIt
+[WIP] BakeIt
 ======
 
 BakeIt is a command line utility to [Pastery](https://www.pastery.net), the best
